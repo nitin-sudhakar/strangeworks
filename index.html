@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Strategy Evaluation: Strangeworks | Genisys IPRO</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                        serif: ['Merriweather', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        'f-bg': '#F5F5F7',
+                        'f-card': '#FFFFFF',
+                        'f-text': '#1D1D1F',
+                        'f-sub': '#86868B',
+                        'f-blue': '#0066CC',
+                        'f-accent': '#2997FF',
+                        'f-risk': '#FF3B30',
+                        'f-success': '#34C759',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px rgba(0, 0, 0, 0.04)',
+                        'hover': '0 10px 30px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 0 20px rgba(0, 102, 204, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Styles */
+        body {
+            background-color: #F5F5F7;
+            color: #1D1D1F;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .citation {
+            font-size: 0.7em;
+            vertical-align: super;
+            color: #0066CC;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0 2px;
+        }
+        
+        .citation:hover {
+            background-color: #E6F0FF;
+            border-radius: 4px;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Typography for Long Form Content */
+        .prose p {
+            margin-bottom: 1.5em;
+            line-height: 1.8;
+        }
+        
+        .prose strong {
+            color: #1D1D1F;
+            font-weight: 700;
+        }
+
+        /* Custom Bullet Points */
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        ul.custom-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0066CC;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="pb-10">
+
+    <!-- Sticky Navigation -->
+    <nav class="glass-nav sticky top-0 z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="font-bold text-lg tracking-tight text-f-text">Strangeworks IP Strategy</span>
+                <span class="text-[10px] uppercase tracking-wider text-f-sub font-semibold">Genisys IPRO &bull; Illinois Tech</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6 text-xs font-medium text-f-sub uppercase tracking-wide">
+                <span>Strategic Evaluation</span>
+                <span>•</span>
+                <span>Deep Tech Analysis</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: EXECUTIVE SUMMARY -->
+    <section class="mt-16 max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block px-3 py-1 rounded-full bg-blue-50 text-f-blue text-xs font-bold uppercase tracking-wider mb-6">Strategic Evaluation</div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-f-text mb-6">
+                IP Strategy Evaluation: <br><span class="text-f-blue">Strangeworks Inc.</span>
+            </h1>
+            <p class="text-xl text-f-sub max-w-3xl mx-auto font-light leading-relaxed">
+                A comprehensive review of how Strangeworks protects its innovations, moving from a "Thin Patent" model to owning deep-tech assets through the Quantagonia acquisition.
+            </p>
+        </div>
+
+        <!-- Full Text Block: Executive Summary -->
+        <div class="bg-white p-10 rounded-3xl shadow-soft border border-gray-100">
+            <div class="flex items-center mb-6 border-b border-gray-100 pb-4">
+                <span class="bg-f-text text-white text-xs font-bold px-2 py-1 rounded mr-3">1.0</span>
+                <h3 class="text-sm font-bold text-f-blue uppercase tracking-widest">Executive Summary & Strategic Overview</h3>
+            </div>
+            
+            <div class="prose prose-lg text-gray-800 max-w-none font-serif">
+                <p><strong>Investment Thesis:</strong> Strangeworks, Inc. occupies a unique and evolving position within the quantum computing investment landscape, primarily functioning as a Quantum Service Provider (QSP) and an orchestration platform, rather than a pure-play hardware manufacturer or algorithm developer. From the perspective of a venture investor, evaluating Strangeworks’ Intellectual Property (IP) strategy requires a distinct framework that departs from traditional patent-counting methodologies often applied to deep technology startups. The company’s trajectory—from a developer-focused community portal to an enterprise-grade orchestration layer, and recently to a vertical owner of proprietary optimisation solvers via the acquisition of Quantagonia—signals a maturation of its "moat" from purely network-based to a hybrid of network effects and proprietary algorithmic know-how <a href="#ref-1" class="citation">[1]</a>.</p>
+                
+                <p>The central thesis of this evaluation is that Strangeworks has historically under-indexed on formal patent protection in favour of speed, agility, and trade secret protection inherent in its cloud-based Platform-as-a-Service (PaaS) delivery model. While this strategy minimised legal overhead during the seed and early venture stages, the successful closure of a $24 million Series A round led by Hitachi Ventures, IBM, and Raytheon Technologies <a href="#ref-1" class="citation">[1]</a> necessitates a pivot toward more defensible "hard IP" assets to justify valuation multiples consistent with deep tech exits rather than standard SaaS multiples.</p>
+                
+                <p><strong>The Tripartite Moat Architecture:</strong> To understand the defensibility of Strangeworks, one must dissect it into three distinct layers, each governed by different IP mechanisms:</p>
+                
+                <ul class="custom-list pl-4 space-y-2 text-base">
+                    <li><strong>The Quantum Syndicate:</strong> Contractual Exclusivity & Technical Integration. Mature status. High switching costs for users; network effects create a barrier to entry <a href="#ref-25" class="citation">[25]</a>.</li>
+                    <li><strong>The Orchestration Layer:</strong> Trade Secrets & Copyright (Code). Moderate status. Defensible via cloud delivery, but vulnerable to replication by hyperscalers (AWS, Azure) <a href="#ref-10" class="citation">[10]</a>.</li>
+                    <li><strong>The Algorithmic Core:</strong> Patents (Potential) & Proprietary Know-How. Emerging status. The Quantagonia HybridSolver creates a distinct, proprietary value proposition beyond aggregation <a href="#ref-3" class="citation">[3]</a>.</li>
+                </ul>
+
+                <p class="mt-6"><strong>Key Recommendations:</strong> The analysis suggests that Strangeworks is investment-ready but requires specific covenant structures to secure the IP baseline. The valuation should be adjusted to reflect a "Hybrid SaaS/Deep Tech" model. Immediate capital allocation post-funding must prioritize a targeted patent harvesting program focused on the "System and Method" of the hybrid solver orchestration to crystallize the value of the recent acquisition. Furthermore, a thorough audit of the "STRANGEWORKS QS" trademark abandonment <a href="#ref-5" class="citation">[5]</a> is necessary to ensure brand integrity is not compromised in key expansion markets like India and Japan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PERSONAL VIEW / BROKEN REGIME -->
+    <section class="mt-24 w-full bg-[#151516] text-gray-200 py-20 border-y border-gray-800 relative overflow-hidden">
+        <!-- Abstract Glow -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-f-blue to-f-accent"></div>
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="flex items-center space-x-3 mb-8">
+                <span class="px-3 py-1 rounded bg-f-blue text-white text-[10px] font-bold uppercase tracking-widest">Analyst Perspective</span>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-10">
+                The "Broken Regime" Thesis
+            </h2>
+
+            <div class="bg-[#1c1c1e]/80 backdrop-blur-sm p-10 rounded-2xl border border-gray-700 shadow-glow">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <p class="leading-relaxed text-gray-300 font-serif text-lg italic border-l-4 border-f-blue pl-6 py-2">
+                            "I personally believe that Strangeworks is doing fine when it comes to how they are dealing with patents. I am somebody who strongly believes that the IP regime that exists today is <strong>designed more for the conditions during the industrial age</strong> than for the present age of digitization."
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <p class="leading-relaxed text-gray-400 text-sm">
+                            From a legal perspective, it is catching up, but I believe when it comes to software, the patent regime is broken. The "patent bargain" was supposed to be: <em>You disclose your invention for the public good, and we give you a 20-year monopoly.</em>
+                        </p>
+                        <p class="leading-relaxed text-gray-400 text-sm">
+                            But in emerging tech, the world changes too fast. By the time a software patent is granted (3-5 years), the code is obsolete. There are more incentives to keep the knowledge secret (Trade Secret) than to publish it. The laggy system fails its very objective where it tried to incentivize disclosure for public good.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 flex items-center justify-between text-xs text-gray-500 border-t border-gray-800 pt-6">
+                <span>Subjective Analysis</span>
+                <span>Context: Industrial vs Digital Age IP</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: CORPORATE PROFILE -->
+    <section class="max-w-5xl mx-auto px-6 mt-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Context Text -->
+            <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100">
+                <div class="flex items-center mb-6 border-b border-gray-100 pb-4">
+                    <span class="bg-f-text text-white text-xs font-bold px-2 py-1 rounded mr-3">2.0</span>
+                    <h3 class="text-sm font-bold text-f-sub uppercase tracking-widest">Corporate Profile & DNA</h3>
+                </div>
+                
+                <div class="prose text-sm text-gray-700 font-serif">
+                    <p><strong>Corporate Profile:</strong> Strangeworks was founded in 2018 by William "whurley" Hurley, a serial entrepreneur and former IBM Master Inventor <a href="#ref-6" class="citation">[6]</a>. The company is headquartered in Austin, Texas, with a growing European footprint following the acquisition of Munich-based Quantagonia <a href="#ref-4" class="citation">[4]</a>. The company’s mission is to "humanize quantum computing" and democratize access to these complex resources <a href="#ref-7" class="citation">[7]</a>.</p>
+                    
+                    <p><strong>The "Quantum Service Provider" (QSP) Model:</strong> The business model is predicated on the fragmentation of the quantum hardware market. Strangeworks solves this "many-to-many" problem by positioning itself as the middleware layer—a single pane of glass for quantum compute. The intellectual property shifts from the hardware component to the network and integration code.</p>
+                </div>
+            </div>
+            
+            <!-- Graphic/Highlight -->
+            <div class="lg:sticky lg:top-24">
+                <div class="bg-gradient-to-br from-gray-900 to-black text-white p-8 rounded-3xl shadow-lg">
+                    <span class="text-f-accent font-bold tracking-wider uppercase text-xs">Differentiation</span>
+                    <h2 class="text-2xl font-bold tracking-tight mb-4 mt-2">The "Switzerland" of Quantum</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Strangeworks does not build the "Engine" (Qubits). They build the "Traffic Control System" (Orchestration).
+                    </p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-f-success rounded-full mr-3"></div>
+                            <span>Aggregation (Unified Interface)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-f-success rounded-full mr-3"></div>
+                            <span>Normalization (Standard Billing)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-f-success rounded-full mr-3"></div>
+                            <span>Orchestration (Smart Routing)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: IP ASSET INVENTORY -->
+    <section class="mt-24 max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold tracking-tight mb-10 text-center">3.0 Intellectual Property Inventory</h2>
+
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Asset 1: Patents -->
+            <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100 hover:shadow-hover transition-shadow">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-f-text">3.1 Patent Portfolio Analysis</h3>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold uppercase rounded-full">Status: Thin Layer</span>
+                </div>
+                <div class="prose text-sm text-gray-700 font-serif">
+                    <p>A rigorous examination of global patent databases reveals that Strangeworks, Inc. holds a surprisingly small number of patents relative to its capital raised. This appears to be a deliberate strategic choice.</p>
+                    <p><strong>Identified Asset:</strong> The primary patent asset explicitly identified in public filings is <strong>US Patent 11,436,519</strong>, titled "Machine Learning Mapping for Quantum Processing Units" <a href="#ref-15" class="citation">[15]</a>. It covers the "brain" of the orchestration layer—the logic that decides which quantum computer should run which part of a job.</p>
+                    <p><strong>The Gap:</strong> Comparators in the quantum software space often hold significantly larger portfolios. For instance, Classiq has over 40 granted patents covering circuit synthesis <a href="#ref-16" class="citation">[16]</a>.</p>
+                </div>
+            </div>
+
+            <!-- Asset 2: Trade Secrets -->
+            <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100 hover:shadow-hover transition-shadow">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-f-text">3.2 Trade Secrets & Know-How</h3>
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-f-blue text-[10px] font-bold uppercase rounded-full">Status: Core Defense</span>
+                </div>
+                <div class="prose text-sm text-gray-700 font-serif">
+                    <p>For a cloud-native platform like Strangeworks, Trade Secrets are the primary mechanism of protection. Unlike on-premise software where binaries can be reverse-engineered, the Strangeworks platform resides on controlled servers.</p>
+                    <p><strong>Protected Subject Matter:</strong> The specific API adapters that connect to Rigetti, IonQ, or IBM machines are likely protected as trade secrets. The "logic" of how to translate a generic QASM circuit into a device-specific pulse schedule is highly valuable know-how.</p>
+                    <p><strong>Legal Infrastructure:</strong> The Terms of Service explicitly claim broad rights over "models, model weights and parameters" and strictly prohibit reverse engineering <a href="#ref-23" class="citation">[23]</a>.</p>
+                </div>
+            </div>
+
+            <!-- Asset 3: Brand -->
+            <div class="bg-white p-8 rounded-3xl shadow-soft border border-gray-100 hover:shadow-hover transition-shadow">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-f-text">3.3 Brand & Trademarks</h3>
+                    <span class="inline-block px-3 py-1 bg-red-50 text-f-risk text-[10px] font-bold uppercase rounded-full">Status: Risk Alert</span>
+                </div>
+                <div class="prose text-sm text-gray-700 font-serif">
+                    <p>The brand "Strangeworks" has achieved significant recognition in the quantum community, associated with "coolness" and accessibility. However, the formal trademark portfolio shows signs of neglect.</p>
+                    <p><strong>Critical Failure:</strong> The USPTO records indicate that the application for "STRANGEWORKS QS" is <strong>DEAD/ABANDONED</strong> as of late 2024 due to a failure to file a Statement of Use <a href="#ref-5" class="citation">[5]</a>. This signals administrative failure and risks brand dilution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MOAT SIMULATOR -->
+    <section class="mt-24 max-w-5xl mx-auto px-6">
+        <div class="bg-[#1c1c1e] text-white rounded-3xl p-10 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">4.0 The Ecosystem Moat</h2>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed font-serif">
+                        Strangeworks has constructed a "Quantum Syndicate" that serves as its primary defensive structure. They have aggregated over 40 partnerships <a href="#ref-25" class="citation text-blue-300">[25]</a>. Each partnership represents a technical integration and a commercial contract. This "Contractual Friction" is a significant barrier to entry.
+                    </p>
+                    
+                    <!-- Fixed Interactive Slider -->
+                    <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 mt-6">
+                        <label class="text-xs font-bold uppercase text-gray-400">Moat Strength Simulator</label>
+                        <input type="range" id="moatSlider" min="1" max="100" value="80" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-blue-500 mt-2 mb-2">
+                        <div class="flex justify-between text-[10px] text-gray-400 mb-4">
+                            <span>Patent Dependent</span>
+                            <span>Network Dependent</span>
+                        </div>
+
+                        <!-- Dynamic Output Box -->
+                        <div id="moatOutput" class="p-3 bg-gray-700/50 rounded-lg border border-gray-600 text-sm transition-all duration-300">
+                            <span class="block font-bold text-f-blue mb-1" id="moatTitle">Current Position: Strangeworks (Platform)</span>
+                            <span class="text-gray-300" id="moatDesc">Moat built on 'Contractual Friction' (40+ signed partners) and User Data. Very hard to copy without years of biz-dev.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center border-l border-gray-700 pl-8">
+                    <h4 class="text-blue-400 font-bold uppercase text-xs mb-3">Strategic Immunity</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        By partnering with the largest IP holders (IBM, Microsoft), Strangeworks reduces the risk of patent assertion. IBM, a strategic investor <a href="#ref-1" class="citation text-blue-300">[1]</a>, is unlikely to sue a portfolio company that serves as a distribution channel for its own hardware.
+                    </p>
+                    <h4 class="text-blue-400 font-bold uppercase text-xs mb-3">Data Gravity</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        The platform generates proprietary metadata: benchmarks of how specific algorithms perform on specific machines. This data trains Machine Learning models to predict job performance, creating a self-reinforcing flywheel.
+                    </p>
+                </div>
+            </div>
+            <!-- Abstract Graphic Background -->
+            <div class="absolute right-0 top-0 h-full w-1/2 bg-blue-600/10 blur-3xl rounded-full pointer-events-none"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: THE PIVOT (QUANTAGONIA) -->
+    <section class="mt-24 max-w-5xl mx-auto px-6 mb-24">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold tracking-tight">5.0 The Pivot: Hard IP</h2>
+            <p class="text-f-sub mt-2">The acquisition that changed the valuation model.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-soft border border-gray-100 overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="p-10 border-r border-gray-100">
+                    <span class="text-f-accent font-bold tracking-wider uppercase text-xs">The Transformation</span>
+                    <h3 class="text-2xl font-bold mb-4 mt-2">Quantagonia Acquisition</h3>
+                    <div class="prose text-sm text-gray-700 font-serif">
+                        <p>The acquisition of Quantagonia in August 2025 is the linchpin of the thesis <a href="#ref-3" class="citation">[3]</a>. It resolves the "thin patent" criticism by internalizing a deep-tech stack.</p>
+                        <p><strong>The Technology:</strong> The core product is the <em>HybridSolver</em>. It uses advanced decomposition techniques, such as <strong>Benders Decomposition</strong> and Dantzig-Wolfe reformulation, to break down massive optimization problems <a href="#ref-20" class="citation">[20]</a>.</p>
+                        <p><strong>Competitive Edge:</strong> Quantagonia claims its solver is "hardware-agnostic" and has demonstrated performance superior to open-source alternatives (SCIP) and competitive with market leaders like Gurobi <a href="#ref-14" class="citation">[14]</a>.</p>
+                    </div>
+                </div>
+                <div class="p-10 bg-gray-50 flex items-center justify-center">
+                    <div class="w-full h-64">
+                         <canvas id="pivotChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDITS -->
+    <section class="mt-24 max-w-5xl mx-auto px-6 text-center mb-12">
+        <div class="inline-block p-6 rounded-2xl bg-white border border-gray-100 shadow-sm transform hover:-translate-y-1 transition-transform duration-300">
+            <p class="text-sm font-bold text-gray-900 mb-2">Made by Nitin Sudhakar</p>
+            <p class="text-xs text-gray-500">Thanks a ton to <strong>Larry Schor</strong> and <strong>Nik Rokop</strong> for all the insights and support!</p>
+        </div>
+    </section>
+
+    <!-- REFERENCES FOOTER -->
+    <footer class="bg-gray-100 py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <h4 class="font-bold text-gray-500 uppercase tracking-wider text-xs mb-6">References & Source Material</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-[11px] text-gray-500">
+                <a id="ref-1" href="https://www.thesaasnews.com/news/strangeworks-closes-24-million-in-series-a" target="_blank" class="hover:text-f-blue hover:underline block truncate">[1] Strangeworks Closes $24 Million in Series A - The SaaS News ↗</a>
+                <a id="ref-2" href="https://strangeworks.com/press/strangeworks-success-drives-ecosystem-expansion-24m-series-a" target="_blank" class="hover:text-f-blue hover:underline block truncate">[2] Commercial Success Drives Expansion - Strangeworks Press ↗</a>
+                <a id="ref-3" href="https://strangeworks.com/press/strangeworks-acquires-quantagonia-to-create-global-leader-in-applied-ai-optimization-and-quantum-computing" target="_blank" class="hover:text-f-blue hover:underline block truncate">[3] Strangeworks Acquires Quantagonia - Press Release ↗</a>
+                <a id="ref-4" href="https://www.taylorwessing.com/zh-hant/insights-and-events/news/media-centre/press-releases/2025/09/taylor-wessing-advises-strangeworks-on-quantagonia-acquisition" target="_blank" class="hover:text-f-blue hover:underline block truncate">[4] Taylor Wessing Advises Strangeworks on Quantagonia Acquisition ↗</a>
+                <a id="ref-5" href="https://www.trademarkia.com/strangeworks-qs-90462228" target="_blank" class="hover:text-f-blue hover:underline block truncate">[5] Trademark Status (Strangeworks QS - Dead/Abandoned) - Trademarkia ↗</a>
+                <a id="ref-6" href="https://en.wikipedia.org/wiki/Whurley" target="_blank" class="hover:text-f-blue hover:underline block truncate">[6] William Hurley (whurley) Founder Profile - Wikipedia ↗</a>
+                <a id="ref-7" href="https://www.siliconhillsnews.com/2018/03/14/whurley-says-quantum-computing-new-space-race/" target="_blank" class="hover:text-f-blue hover:underline block truncate">[7] Whurley Says Quantum Computing is the New Space Race ↗</a>
+                <a id="ref-10" href="https://strangeworks.com/" target="_blank" class="hover:text-f-blue hover:underline block truncate">[10] Strangeworks Official Website & Platform ↗</a>
+                <a id="ref-12" href="https://strangeworks.com/press/strangeworks-announces-consumption-pricing-for-qiskit-runtime-on-ibm-quantum" target="_blank" class="hover:text-f-blue hover:underline block truncate">[12] Consumption Pricing Model with IBM - Strangeworks Press ↗</a>
+                <a id="ref-14" href="https://www.quantagonia.com/post/quantagonias-solver-shows-strong-performance-in-mittelmanns-benchmark" target="_blank" class="hover:text-f-blue hover:underline block truncate">[14] Quantagonia HybridSolver Benchmarks ↗</a>
+                <a id="ref-15" href="https://www.sec.gov/Archives/edgar/data/1758009/000121390022083615/ea169744-s3_quantum.htm" target="_blank" class="hover:text-f-blue hover:underline block truncate">[15] Strangeworks Patent (US 11,436,519) - SEC.gov ↗</a>
+                <a id="ref-16" href="https://insights.greyb.com/classiq-technologies-patents/" target="_blank" class="hover:text-f-blue hover:underline block truncate">[16] Classiq Patent Portfolio Benchmarking - GreyB ↗</a>
+                <a id="ref-20" href="https://www.quantagonia.com/post/solving-mips-with-enhanced-quantum-ready-decomposition" target="_blank" class="hover:text-f-blue hover:underline block truncate">[20] Solving MIPs with Decomposition - Quantagonia Tech Blog ↗</a>
+                <a id="ref-23" href="https://strangeworks.com/service-agreement-8-18-2025" target="_blank" class="hover:text-f-blue hover:underline block truncate">[23] Strangeworks Service Agreement - Aug 18 2025 ↗</a>
+                <a id="ref-25" href="https://strangeworks.com/syndicate" target="_blank" class="hover:text-f-blue hover:underline block truncate">[25] Quantum Syndicate Partnership Network ↗</a>
+                <a id="ref-26" href="https://thequantuminsider.com/2025/09/23/top-quantum-computing-companies/" target="_blank" class="hover:text-f-blue hover:underline block truncate">[26] Quantum Computing Companies in 2025 ↗</a>
+            </div>
+            
+            <!-- COPY-LEFT FOOTER -->
+            <div class="mt-12 text-center border-t border-gray-200 pt-8">
+                <p class="text-sm font-bold text-gray-900">
+                    No Rights Reserved.
+                </p>
+                <p class="text-xs text-gray-500 mt-2 max-w-2xl mx-auto leading-relaxed">
+                    Information grows when shared, not hoarded. Steal this code—we probably copied a StackOverflow thread to build it anyway. <br>
+                    <span class="italic text-gray-400">(And yes, AI may have helped optimize the CSS, but the strategy is all real.)</span>
+                </p>
+                <p class="text-[10px] text-gray-400 mt-4">Genisys IPRO Class - Illinois Institute of Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC -->
+    <script>
+        // 1. MOAT SIMULATOR LOGIC
+        const moatSlider = document.getElementById('moatSlider');
+        const moatTitle = document.getElementById('moatTitle');
+        const moatDesc = document.getElementById('moatDesc');
+
+        moatSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            if (val < 40) {
+                moatTitle.innerText = "Scenario: Hardware Manufacturer";
+                moatTitle.className = "block font-bold text-f-risk mb-1";
+                moatDesc.innerText = "Heavy reliance on patents (Hardware). High risk of technology becoming obsolete. If the physics change, you lose everything.";
+            } else if (val < 70) {
+                moatTitle.innerText = "Scenario: Hybrid Model";
+                moatTitle.className = "block font-bold text-yellow-600 mb-1";
+                moatDesc.innerText = "A mix of patents and partnerships. Moderate defensibility, but requires high maintenance.";
+            } else {
+                moatTitle.innerText = "Scenario: Strangeworks (Platform)";
+                moatTitle.className = "block font-bold text-f-blue mb-1";
+                moatDesc.innerText = "Moat built on 'Contractual Friction' (40+ signed partners) and User Data. Very hard to copy without years of biz-dev.";
+            }
+        });
+
+        // 2. Chart.js - The Pivot Visualization
+        const ctx = document.getElementById('pivotChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Aggregator Strategy', 'Owner Strategy (Post-Acq)'],
+                datasets: [
+                    {
+                        label: 'Soft IP (Network/Brand)',
+                        data: [90, 95],
+                        backgroundColor: '#E5E5E5',
+                        stack: 'Stack 0',
+                    },
+                    {
+                        label: 'Hard IP (Algorithms/Patents)',
+                        data: [10, 85], // The jump due to Quantagonia
+                        backgroundColor: '#0066CC',
+                        stack: 'Stack 0',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Value Composition Shift',
+                        font: { family: '-apple-system', size: 14 }
+                    },
+                    legend: { position: 'bottom' }
+                },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
